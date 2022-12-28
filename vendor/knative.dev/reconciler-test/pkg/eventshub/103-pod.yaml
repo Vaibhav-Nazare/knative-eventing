@@ -47,7 +47,7 @@ spec:
           {{ end }}
         allowPrivilegeEscalation: {{ .containerSecurityContext.allowPrivilegeEscalation }}
       {{ end }}
-      image: registry.ci.openshift.org/openshift/knative-v1.5:knative-eventing-test-eventshub
+      image: IMAGE_REGISTRY_NAME/openshift-knative/eventing/eventshub:v1.5
       imagePullPolicy: "IfNotPresent"
       {{ if .withReadiness }}
       readinessProbe:
